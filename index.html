@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solvenn Agendamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="logo.png" alt="Logo Solvenn" class="logo">
+    </header>
+
+    <main class="container">
+        <h1>Agende seu Serviço!</h1>
+        <p>Serviços de instalação, climatização e automação com qualidade e rapidez.</p>
+
+        <section class="servicos">
+            <h2>Nossos Serviços</h2>
+            <ul>
+                <li><strong>Instalação de Ar-condicionado</strong><br>Instalação de splits, inverter e janela.</li>
+                <li><strong>Automação Residencial</strong><br>Controle de iluminação, portões, segurança e mais.</li>
+                <li><strong>Manutenção Elétrica</strong><br>Instalações, reparos e manutenções preventivas.</li>
+            </ul>
+        </section>
+
+        <section class="formulario">
+            <h2>Agende seu Serviço</h2>
+            <form onsubmit="enviarWhatsApp(); return false;">
+                <input type="text" id="nome" placeholder="Seu Nome" required>
+                <input type="tel" id="telefone" placeholder="Telefone" required>
+                <select id="servico" required>
+                    <option value="">Selecione o serviço</option>
+                    <option value="Instalação de Ar-condicionado">Instalação de Ar-condicionado</option>
+                    <option value="Automação Residencial">Automação Residencial</option>
+                    <option value="Manutenção Elétrica">Manutenção Elétrica</option>
+                </select>
+                <textarea id="descricao" placeholder="Descreva o serviço desejado"></textarea>
+                <input type="date" id="data" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section class="contato">
+            <h2>Fale Conosco</h2>
+            <p><img src="phone-icon.png" alt="Telefone" class="icone"> (31) 99337-9116</p>
+            <p><img src="phone-icon.png" alt="Telefone" class="icone"> (31) 98958-4464</p>
+            <p>Email: solvenn.suporte@gmail.com</p>
+        </section>
+    </main>
+
+    <script>
+    function enviarWhatsApp() {
+        var nome = document.getElementById('nome').value;
+        var telefone = document.getElementById('telefone').value;
+        var servico = document.getElementById('servico').value;
+        var descricao = document.getElementById('descricao').value;
+        var data = document.getElementById('data').value;
+
+        var numeroWhatsApp = "5531993379116"; // Número com DDD, sem espaço e sem traço
+
+        var mensagem = `Olá, meu nome é ${nome}%0A` +
+                       `Telefone: ${telefone}%0A` +
+                       `Serviço: ${servico}%0A` +
+                       `Descrição: ${descricao}%0A` +
+                       `Data desejada: ${data}`;
+
+        var url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+
+        window.open(url, '_blank');
+    }
+    </script>
+
+    <footer class="container" style="text-align: center; padding: 20px;">
+        <p><a href="politica.html">Política de Privacidade</a></p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #2980b9, #6dd5fa);
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.container {
+    padding: 20px;
+    background: #ffffffcc;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+form input, form select, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1em;
+}
+
+form button {
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #2980b9;
+}
+
+.contato p {
+    display: flex;
+    align-items: center;
+}
+
+.icone {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
